@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nnstories_lesson/second_screen.dart';
+import 'package:nnstories_lesson/home_work1.dart';
 
 void main() {
   runApp(const MyApp());
