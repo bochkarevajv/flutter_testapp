@@ -7,6 +7,7 @@ void toPrint(){
 }
 }
 
+
 void registered({double speed1 = 40, String name1 = "Volga",
   double speed2 = 150, String name2 = "Honda",
   double speed3 = 200, String name3 = "BMW"}){
