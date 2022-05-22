@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nnstories_lesson/home_work1.dart';
-
-void main() {
+import 'package:nnstories_lesson/test_screen.dart';
+// @dart=2.9
+Future<void> main() async {
   runApp(const MyApp());
 }
 
@@ -14,7 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
+      debugShowCheckedModeBanner: false,
+      home: TestScreen(),
+     // theme: ThemeData(
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
@@ -24,9 +26,9 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Мое первое приложение'),
+      //  primarySwatch: Colors.blue,
+     // ),
+      //home: const MyHomePage(title: 'Мое первое приложение'),
     );
   }
 }
