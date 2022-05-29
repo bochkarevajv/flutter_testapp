@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../pages/menu.dart';
 
 class MyScaffold extends StatelessWidget {
- 
+  int _selectedIndex = 0;
   final String title;
   final Widget body;
    MyScaffold({Key? key, this.title='Заголовок', required this.body}) : super(key: key);
@@ -41,9 +41,10 @@ class MyScaffold extends StatelessWidget {
           endDrawer:buildMenu(context, width:width * 0.7),
           body: body,
         bottomNavigationBar: BottomNavigationBar(
-
-          onTap: ,
-          items: const <BottomNavigationBarItem>[
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.indigoAccent,
+          onTap: _onPage,
+           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.pages),
                 label: '1',
             backgroundColor: Colors.indigo,
@@ -67,5 +68,11 @@ class MyScaffold extends StatelessWidget {
     }
   }
 
-    }
+    
+  void _onPage(int index) {
+    setState () {
+      _selectedIndex = index;
+    };
+  }
+}
 

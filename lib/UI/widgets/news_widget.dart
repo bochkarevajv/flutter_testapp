@@ -22,7 +22,7 @@ class NewsWidget extends StatelessWidget{
      padding: EdgeInsets.all(10),
      margin: EdgeInsets.all(8),
      decoration: BoxDecoration(
-       border: Border.all(width: 1.2),
+       border: Border.all(width: 1.3),
      borderRadius: BorderRadius.circular(20)
    ),
    child: Column(

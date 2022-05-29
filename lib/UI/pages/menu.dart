@@ -12,7 +12,7 @@ Widget buildMenu(BuildContext context, {width = 200}) {
     child: Column(
       children: [
         SizedBox(
-          height: 70,
+          height: 60,
         ),
         ListTile(
           title: Text('Страница 1'),
