@@ -7,7 +7,7 @@ import 'package:nnstories_lesson/UI/pages/test_screen4.dart';
 Widget buildMenu(BuildContext context, {width = 200}) {
   return Container(
     width: width,
-    color: Colors.blueAccent,
+    color: Colors.grey,
 
     child: Column(
       children: [
@@ -25,6 +25,7 @@ Widget buildMenu(BuildContext context, {width = 200}) {
         ),
         ListTile(
           title: Text('Страница 2'),
+
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(builder: (BuildContext context) {

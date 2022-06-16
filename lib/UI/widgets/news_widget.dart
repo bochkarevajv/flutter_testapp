@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:nnstories_lesson/Models/News_model.dart';
 
 class NewsWidget extends StatelessWidget{
-  final String title;
-  final String text;
-  final String photoURL;
-  final String id;
+  final NewsModel newsModel;
+
   const NewsWidget(
-      {Key? key, this.title = 'Заголовок',
-        this.text = 'Текст',
-        this.photoURL = '',
-        this.id = '2214'}) :
+      {Key? key, required this. newsModel}) :
         super(key: key);
 
   @override
@@ -26,10 +22,11 @@ class NewsWidget extends StatelessWidget{
      borderRadius: BorderRadius.circular(20)
    ),
    child: Column(
+     crossAxisAlignment: CrossAxisAlignment.stretch,
      children: [
-       Text (title),
-       Expanded(child: Card(child: Text('        фото        '),)),
-       Text (text),
+       Text (newsModel.title),
+       Expanded(child: Card(child: Image.network(newsModel.photoURL),)),
+       Text (newsModel.text),
 
      ],
    )
