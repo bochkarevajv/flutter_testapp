@@ -7,7 +7,6 @@ class loginPage extends StatefulWidget{
   @override
   State<loginPage> createState() => _loginPageState();
 }
-
 class _loginPageState extends State<loginPage> {
   int i=0;
   int initStateCount=0;

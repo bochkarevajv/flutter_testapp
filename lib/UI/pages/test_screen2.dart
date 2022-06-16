@@ -7,7 +7,6 @@ import 'package:nnstories_lesson/UI/widgets/news_widget.dart';
 import '../widgets/second_widget.dart';
 
 String myString = "";
-
 class TestScreen2 extends StatelessWidget {
   const TestScreen2({Key? key}) : super(key: key);
   static const String title = 'Старый Нижний';

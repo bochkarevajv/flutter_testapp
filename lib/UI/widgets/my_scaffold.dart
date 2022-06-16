@@ -8,7 +8,6 @@ import 'package:nnstories_lesson/UI/pages/test_screen4.dart';
 import '../pages/menu.dart';
 
 class MyScaffold extends StatelessWidget {
-
   final String title;
   final Widget body;
 

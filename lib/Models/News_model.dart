@@ -17,7 +17,6 @@ NewsModel.fromMap(Map<String, dynamic> dataMap,{
     this.photoURL = dataMap['photoURL']??'';
 
 }
-
 }
 Map <String, dynamic> map = {
 'text' : 'текс новости',

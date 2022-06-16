@@ -37,7 +37,6 @@ List<NewsModel> newsModelList = [];
   void initState(){
     getNewsFromDB ().then((value) {
       setState ((){
-
       });
     });
 super.initState();

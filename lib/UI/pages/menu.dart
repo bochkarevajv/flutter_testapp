@@ -8,7 +8,6 @@ Widget buildMenu(BuildContext context, {width = 200}) {
   return Container(
     width: width,
     color: Colors.grey,
-
     child: Column(
       children: [
         SizedBox(

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class SecondWidget extends StatelessWidget{
-
   const SecondWidget({Key? key}) : super(key: key);
 
   @override

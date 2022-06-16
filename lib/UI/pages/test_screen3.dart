@@ -60,8 +60,7 @@ class TestScreen3 extends StatelessWidget {
                               if (snapshot.hasData) {
                                return snapshot.data;
                                } else {
-                                return Text('Loading...');
-    }
+                                return Text('Loading...');}
                               },
                             ),
 

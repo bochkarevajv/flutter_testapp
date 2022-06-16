@@ -3,7 +3,6 @@ import 'package:nnstories_lesson/Models/News_model.dart';
 
 class NewsWidget extends StatelessWidget{
   final NewsModel newsModel;
-
   const NewsWidget(
       {Key? key, required this. newsModel}) :
         super(key: key);
