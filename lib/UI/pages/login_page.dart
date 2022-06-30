@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:nnstories_lesson/UI/pages/test_screen1.dart';
 import 'package:nnstories_lesson/UI/widgets/my_scaffold.dart';
+
+
 
 class loginPage extends StatefulWidget{
   const loginPage({Key? key}) : super(key: key);
@@ -15,6 +18,8 @@ class _loginPageState extends State<loginPage> {
 TextEditingController phoneNumberController = TextEditingController();
 String? errorMessage;
 String phoneNumber = '';
+
+
 
 checkPhoneNumber (){
   if (phoneNumberController.text.length < 10 || phoneNumberController.text.length >10) {
@@ -33,6 +38,12 @@ checkCode (){
   }else {
     errorMessage = null;
     _codeWasSended = true;
+    Navigator.of(context).push(
+    MaterialPageRoute(builder: (BuildContext context) {
+      return TestScreen1();
+    }),);
+
+    
   }
 }
 @override
@@ -68,10 +79,13 @@ return MyScaffold(
   double width = MediaQuery. of(context).size.width;
 return SizedBox(
   width: width*0.3,
-  child:   Column( mainAxisAlignment: MainAxisAlignment.spaceAround,
+  child:   Column(
+    mainAxisAlignment: MainAxisAlignment.spaceAround,
     children: [
       TextFormField(controller: phoneNumberController,
         decoration: InputDecoration(errorText: errorMessage,
+        border: OutlineInputBorder(),
+        contentPadding: EdgeInsets.symmetric(horizontal:10),
         label: Text(_codeWasSended?'Введите полученный код':'Введите номер телефона')
       ),),
       ElevatedButton(onPressed: (){
@@ -87,8 +101,14 @@ return SizedBox(
       }, child: Text(_codeWasSended?'Войти':'Получить смс с кодом'))
 
     ],
-
+    
   ),
 );
+ 
+
+
+
+
   }
+
   }

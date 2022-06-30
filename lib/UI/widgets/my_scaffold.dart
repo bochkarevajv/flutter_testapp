@@ -4,6 +4,7 @@ import 'package:nnstories_lesson/UI/pages/test_screen1.dart';
 import 'package:nnstories_lesson/UI/pages/test_screen2.dart';
 import 'package:nnstories_lesson/UI/pages/test_screen3.dart';
 import 'package:nnstories_lesson/UI/pages/test_screen4.dart';
+import 'package:nnstories_lesson/UI/widgets/menu_icon.dart';
 
 import '../pages/menu.dart';
 
@@ -46,7 +47,16 @@ class MyScaffold extends StatelessWidget {
       );
     } else {
       return Scaffold(
-          appBar: AppBar(title: Text(title),
+          appBar: AppBar(title: Text(title),actions: [
+              IconButton(onPressed: (){
+               Navigator.of(context).push(
+               MaterialPageRoute(builder: (BuildContext context) {
+               return loginPage();
+               }));
+               },
+                  icon:const Icon (Icons.logout)),
+            MenuWidget()
+               ],
           backgroundColor: Colors.cyan),
           drawerEdgeDragWidth: width * 0.7,
           endDrawer: buildMenu(context, width: width * 0.7),
@@ -73,7 +83,7 @@ class MyScaffold extends StatelessWidget {
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.pages),
-                label: '4',
+                label: 'Музыка',
                 backgroundColor: Colors.blueGrey,
               ),
             ],
