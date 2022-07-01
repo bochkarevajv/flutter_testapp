@@ -77,16 +77,19 @@ class MyScaffold extends StatelessWidget {
                 backgroundColor: Colors.blueGrey,
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.pages),
-                label: '3',
+                icon: Icon(Icons.place),
+                label: 'Места',
                 backgroundColor: Colors.blueGrey,
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.pages),
+                icon: Icon(Icons.library_music),
                 label: 'Музыка',
                 backgroundColor: Colors.blueGrey,
               ),
             ],
+            type: BottomNavigationBarType.fixed,
+            showSelectedLabels: true,
+            showUnselectedLabels: true,
           ));
     }
   }

@@ -21,6 +21,8 @@ String phoneNumber = '';
 
 
 
+
+
 checkPhoneNumber (){
   if (phoneNumberController.text.length < 10 || phoneNumberController.text.length >10) {
     errorMessage = 'Неверно введен номер телефона';
@@ -77,6 +79,7 @@ return MyScaffold(
   }
   Widget body (BuildContext context){
   double width = MediaQuery. of(context).size.width;
+
 return SizedBox(
   width: width*0.3,
   child:   Column(
@@ -85,7 +88,7 @@ return SizedBox(
       TextFormField(controller: phoneNumberController,
         decoration: InputDecoration(errorText: errorMessage,
         border: OutlineInputBorder(),
-        contentPadding: EdgeInsets.symmetric(horizontal:10),
+        contentPadding: EdgeInsets.symmetric(horizontal:3, vertical:20),
         label: Text(_codeWasSended?'Введите полученный код':'Введите номер телефона')
       ),),
       ElevatedButton(onPressed: (){
@@ -98,7 +101,8 @@ return SizedBox(
         }
   setState((){
      });
-      }, child: Text(_codeWasSended?'Войти':'Получить смс с кодом'))
+      }, child: Text(_codeWasSended?'Войти':'Получить смс с кодом')),
+
 
     ],
     
